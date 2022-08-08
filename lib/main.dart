@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           height:30,
                           width:150,
-                          child:Center(child: Text('Temperature',style: TextStyle(color: Colors.black,fontSize: 16)))
+                          child:Center(child: Text('Temperature',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)))
                         )
                       ],
                     )
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           height:30,
                           width:150,
-                          child:Center(child: Text('weight',style: TextStyle(color: Colors.black,fontSize: 16)))
+                          child:Center(child: Text('Weight',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)))
                         )
                       ],
                     )
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           height:30,
                           width:150,
-                          child:Center(child: Text('Length',style: TextStyle(color: Colors.black,fontSize: 16)))
+                          child:Center(child: Text('Length',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)))
                         )
                       ],
                     )
@@ -157,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           height:30,
                           width:150,
-                          child:Center(child: Text('Speed',style: TextStyle(color: Colors.black,fontSize: 16)))
+                          child:Center(child: Text('Speed',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)))
                         )
                       ],
                     )
@@ -564,11 +564,11 @@ class WeightState extends State<weightConversion> {
 
   dynamic Conversions = 
   {
-    '0':[1.0,1000.0,1000000.0,1/2.205,1/35.274],
-    '1':[0.001,1.0,1000.0,453.6,28.35],
-    '2':[0.00001,0.001,1.0,453600,28350],
-    '3':[2.205,1/453.6,1/453600.0,1.0,1/16],
-    '4':[35.274,1/28.35,1/28350.0,16.0,1.0]
+    '0':[1.0,1000.0,1000000.0,2.205,35.274],
+    '1':[0.001,1.0,1000.0,1/453.6,1/28.35],
+    '2':[0.00001,0.001,1.0,1/453600,1/28350],
+    '3':[1/2.205,453.6,453600.0,1.0,16.0],
+    '4':[1/35.274,28.35,28350.0,1/16.0,1.0]
   };
 
   void Convert(double value, String from, String to){
