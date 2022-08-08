@@ -62,16 +62,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => tempConversion())
                       );
                     },
-                    child: Container(
-                      height: 200,
-                      width: 150,
-                      child: Center(child: Text("Temperature",textAlign: TextAlign.center, style: TextStyle(color: Colors.white, 
-                      fontSize: 15, fontFamily: 'Montserrat'))),
-                      decoration: BoxDecoration(
-                        // image:DecorationImage(image: AssetImage('Images/temp.png')),
-                        color: Colors.grey[900],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
+                    child:Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            image:DecorationImage(image: AssetImage('Images/temp.png')),
+                            color: Colors.grey[900],
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        Container(
+                          height:30,
+                          width:150,
+                          child:Center(child: Text('Temperature',style: TextStyle(color: Colors.black,fontSize: 16)))
+                        )
+                      ],
                     )
                   ),
                   GestureDetector(
@@ -80,20 +87,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => weightConversion())
                       );
                     },
-                    child: Container(
-                      height: 200,
-                      width: 150,
-                      child:Center(
-                        child: Text("Weight",style: TextStyle(color: Colors.white, fontSize: 15, fontFamily: 'Montserrat'))),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[900],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
+                    child:Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            image:DecorationImage(image: AssetImage('Images/weight.png')),
+                            color: Colors.grey[900],
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        Container(
+                          height:30,
+                          width:150,
+                          child:Center(child: Text('weight',style: TextStyle(color: Colors.black,fontSize: 16)))
+                        )
+                      ],
                     )
-                  )
+                  ),
                 ],
               ),
-              SizedBox(height:20),
+              SizedBox(height:50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -103,15 +118,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => lengthConversion())
                       );
                     },
-                    child: Container(
-                      height: 200,
-                      width: 150,
-                      child:Center(
-                        child: Text("Length",style: TextStyle(color: Colors.white, fontSize: 15, fontFamily: 'Montserrat'))),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[900],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
+                    child:Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            image:DecorationImage(image: AssetImage('Images/length.png')),
+                            color: Colors.grey[900],
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        Container(
+                          height:30,
+                          width:150,
+                          child:Center(child: Text('Length',style: TextStyle(color: Colors.black,fontSize: 16)))
+                        )
+                      ],
                     )
                   ),
                   GestureDetector(
@@ -120,17 +143,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => speedConversion())
                       );
                     },
-                    child: Container(
-                      height: 200,
-                      width: 150,
-                      child:Center(
-                        child: Text("Speed",style: TextStyle(color: Colors.white, fontSize: 15, fontFamily: 'Montserrat'))),
-                      decoration: BoxDecoration(
-                        color:Colors.grey[900],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
+                    child:Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            image:DecorationImage(image: AssetImage('Images/speed.png')),
+                            color: Colors.grey[900],
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        Container(
+                          height:30,
+                          width:150,
+                          child:Center(child: Text('Speed',style: TextStyle(color: Colors.black,fontSize: 16)))
+                        )
+                      ],
                     )
-                  )
+                  ),
                 ],
               ),
             ],
@@ -204,8 +235,6 @@ class Tempstate extends State<tempConversion> {
       result=result;
     });
   }
-
-  
 
 
   Color? bg = Colors.grey[800];

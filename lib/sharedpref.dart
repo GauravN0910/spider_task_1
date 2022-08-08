@@ -14,7 +14,6 @@ class sharedpref {
     await prefs?.setString(key, data);
   }
 
-  static String? getdata() {
-    prefs?.getString(key);
-  }
+  static String? getdata() => prefs?.getString(key);
+
 }
