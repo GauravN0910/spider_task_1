@@ -1611,16 +1611,21 @@ class History extends StatefulWidget {
 
 class _HistoryState extends State<History> {
 
-  String history="";
+  List<String> history=[];
+  String historytext="";
 
   @override
   void initState() {
     super.initState();
 
-    history = sharedpref.getdata() ?? '';
+    history.add(sharedpref.getdata() ?? '');
+    for (int i=0;i<history.length;i++){
+      historytext = historytext + history[i];
+    }
     setState(() {
-      history=history;
+      historytext=historytext;
     });
+
   }
 
   @override
@@ -1644,7 +1649,7 @@ class _HistoryState extends State<History> {
               color: Colors.grey[900],
               borderRadius: BorderRadius.circular(16)
             ),
-            child:Center(child:Text(history, style: TextStyle(color: Colors.white)))
+            child:Center(child:Text(historytext, style: TextStyle(color: Colors.white)))
           )
         )
       )
